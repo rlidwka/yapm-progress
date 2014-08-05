@@ -1,0 +1,10 @@
+{
+  "name"         : "yapm-progress",
+  "version"      : "0.1.0",
+  "description"  : "progress bar extracted from yapm",
+  "homepage"     : "https://github.com/rlidwka/yapm-progress",
+  "author"       : "Alex Kocharin <alex@kocharin.ru>",
+  "dependencies" : { "status-bar": "*" },
+  "repository"   : { "type": "git", "url": "git://github.com/rlidwka/yapm-progress.git" },
+  "license"      : "WTFPL"
+}
