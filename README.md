@@ -11,7 +11,8 @@ require('yapm-progress')
   .intercept(process.stdout)
   .output(process.stderr)
   .add('npm', request('https://registry.npmjs.org/npm'))
-  .add('commander', request('https://registry.npmjs.org/commander'))
+  .add('express', request('https://registry.npmjs.org/express'))
+  .add('connect', request('https://registry.npmjs.org/connect'))
 ```
 
 ## API:
