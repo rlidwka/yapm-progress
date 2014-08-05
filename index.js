@@ -18,8 +18,10 @@ function Progress() {
 		total: Infinity,
 		render: function (stats) {
 			return format_speed(stats.speed) + ' [' + self.requests_finished + '/' + self.requests_total + ']'
-		}
+		},
+		frequency: 0, // disable first setInterval there
 	})
+	this.control._elapsedTimer = {}; // disable second setInterval
 	this.streams.push(this.control)
 	this.interval = false
 
@@ -149,8 +151,10 @@ function new_stream(name, total) {
 				'/' +
 				format_storage(stats.totalSize) +
 			']'
-		}
+		},
+		frequency: 0, // disable first setInterval there
 	})
+	bar._elapsedTimer = {}; // disable second setInterval
 	bar.update(0)
 	return bar
 }

@@ -4,7 +4,7 @@
   "description"  : "progress bar extracted from yapm",
   "homepage"     : "https://github.com/rlidwka/yapm-progress",
   "author"       : "Alex Kocharin <alex@kocharin.ru>",
-  "dependencies" : { "status-bar": "*" },
+  "dependencies" : { "status-bar": "1.x" },
   "repository"   : { "type": "git", "url": "git://github.com/rlidwka/yapm-progress.git" },
   "license"      : "WTFPL"
 }
