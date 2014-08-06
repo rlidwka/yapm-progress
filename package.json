@@ -1,6 +1,6 @@
 {
   "name"         : "yapm-progress",
-  "version"      : "0.1.0",
+  "version"      : "0.1.1",
   "description"  : "progress bar extracted from yapm",
   "homepage"     : "https://github.com/rlidwka/yapm-progress",
   "author"       : "Alex Kocharin <alex@kocharin.ru>",
