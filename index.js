@@ -46,10 +46,10 @@ P.enable = function(interval) {
 
 P.intercept = function(stream) {
 	var self = this
-	var old_stdout_write = stream.write
-	process.stdout.write = function() {
+	var old_write = stream.write
+	stream.write = function() {
 		if (!self.our_output) if (self.have_progressbar) self.write('\033[2K\r')
-		old_stdout_write.apply(stream, arguments)
+		old_write.apply(stream, arguments)
 		if (!self.our_output) if (self.have_progressbar) self.update()
 	}
 	return this
