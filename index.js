@@ -48,9 +48,15 @@ P.intercept = function(stream) {
 	var self = this
 	var old_write = stream.write
 	stream.write = function() {
-		if (!self.our_output) if (self.have_progressbar) self.write('\033[2K\r')
+		if (self.our_output || !self.have_progressbar)
+			return old_write.apply(stream, arguments)
+
+		self.have_progressbar = false
+		self.write('\033[2K\r')
 		old_write.apply(stream, arguments)
-		if (!self.our_output) if (self.have_progressbar) self.update()
+		process.nextTick(function() {
+			self.update()
+		})
 	}
 	return this
 }
